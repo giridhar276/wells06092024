@@ -1,0 +1,214 @@
+anaconda
+
+
+spyder
+
+
+
+
+
+
+Acaconda
+------------
+spyder ide
+jupyter notebook ( web interface)
+anaconda prompt
+orange visualization
+
+
+
+
+
+
+*** Everything in python is object ***
+*** Every object contains methods ***
+
+
+number
+--------
+number can be integer or decimal or octal or hexa.
+
+val = 10
+aval = 343.3
+
+
+string
+-------
+string is defined in single or double or triple quotes.
+
+aname = 'python programming'
+bname = "unix shell scripting"
+cname = """java programming"""
+
+
+list ( just like array in C )( mutable , changeable )
+---------------------------
+list contains set of elements.
+elements can be numbers or strings or any combination.
+list elements are defined in [].
+
+alist = [10,20,30,40]
+blist = ["java","unix","oracle"]
+clist = [30,435.43,"java"]
+
+
+tuple  ( immutable  , unchangeable )
+-----------
+tuple contains set of elements.
+elements can be numbers or strings or any combination.
+tuple elemnets are defined in ().
+*********** Elements inside the tuple cannot be modified directly *************
+
+atup = (20,30,30,40)
+btup = (34,43.34,"java")
+
+
+dictionary ( hash  hashmap  json )
+-----------------------------------
+dictionary contains elements in the form of keys and values.
+in dictionary , key would be number or string used to uniquely identify the value.
+            value can be number or string or list or tuple or dictionary or complex structure
+
+syntax:     object = { key:value , key:value , key:value }
+example:      book = {"chap1":10 ,"chap2":20 ,"chap3':30}
+               data = {1:2,3:4,5:6}
+              bookinfo = {"chap1":["rao","US',100] ,"chap2":["rita","uk",300] }
+	
+
+
+set
+------
+set is unordered collection of unique items of same TYPE.
+
+aset = {10,10,10,20,30,30}
+
+commenting in python
+------------------------
+
+# this is single line comment
+
+
+'''
+this is the 
+commented line
+
+'''
+
+
+
+
+statements
+------------
+
+- conditional statements
+-------------------------
+if
+if-else
+if-elif-elif..eles
+
+
+- control statements
+----------------------
+for
+while
+
+
+
+operators
+-------------
+
+arithmetic operators : + - * % /
+
+relational operators :   <  <=    >    >=    ==     !=
+
+if 4 < 10:
+   ###
+
+
+name = 'python programming"
+if name.count('p') == 2 :
+     # some logic
+
+
+logical operators :    and    or   not
+---------------------
+if cond1  and cond2:
+      # statements
+
+
+if cond1 or cond2:
+     # statements
+
+
+assignment operators  ( ++ and -- are NOT allowed in python )
+-----------------------------------------------------------
+val = 10
+val = val + 1    (or)  val+=1
+val = val - 1    (or)  val-=1
+
+special operators
+-----------------
++ ( objects should be same type)
+*
+in
+as
+
+
+
+
+
+How to display all the list of builtin(pre defined) functions and exceptions ?
+-----------------------------------------------------------------
+dir(__builtin__)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
