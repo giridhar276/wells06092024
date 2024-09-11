@@ -1,0 +1,548 @@
+
+
+https://github.com/giridhar276/wells06092024
+
+
+
+
+
+write a program to display the below IP addresses
+
+192.168.0.1
+192.168.0.2
+192.168.0.3
+..
+..
+192.168.0.10
+
+
+
+# method1
+fixed = "192.168.0."
+
+for val in range(1,11):
+    ip = fixed + str(val)
+    print(ip)
+
+
+#method2
+ip=  "192.168.0.{}"
+for val in range(1,11):
+    print(ip.format(val))
+    
+
+# str.format examples
+string  = "I love {} and {} and {}"
+print(string.format("python","unix","sas"))  # I love python
+
+
+
+
+
+#################################################################################
+
+write a program to display the below IP addresses
+
+192.168.0.1
+192.168.0.2
+192.168.0.3
+..
+..
+192.168.0.10
+192.168.1.1
+192.168.1.2
+192.168.1.3
+..
+..
+192.168.1.10
+
+
+
+ip = "192.168.{}.{}"
+
+for val in range(0,2):
+    for ival in range(1,11):
+        ipaddress = ip.format(val,ival)
+        print(ipaddress)
+        
+
+
+#################################################################################
+
+
+alist= [
+  {
+    "login": "mojombo",
+    "id": 1,
+    "node_id": "MDQ6VXNlcjE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mojombo",
+    "html_url": "https://github.com/mojombo",
+    "followers_url": "https://api.github.com/users/mojombo/followers",
+    "following_url": "https://api.github.com/users/mojombo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mojombo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mojombo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mojombo/subscriptions",
+    "organizations_url": "https://api.github.com/users/mojombo/orgs",
+    "repos_url": "https://api.github.com/users/mojombo/repos",
+    "events_url": "https://api.github.com/users/mojombo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mojombo/received_events",
+    "type": "User",
+    "site_admin": False
+  },
+  {
+    "login": "defunkt",
+    "id": 2,
+    "node_id": "MDQ6VXNlcjI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/defunkt",
+    "html_url": "https://github.com/defunkt",
+    "followers_url": "https://api.github.com/users/defunkt/followers",
+    "following_url": "https://api.github.com/users/defunkt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/defunkt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/defunkt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/defunkt/subscriptions",
+    "organizations_url": "https://api.github.com/users/defunkt/orgs",
+    "repos_url": "https://api.github.com/users/defunkt/repos",
+    "events_url": "https://api.github.com/users/defunkt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/defunkt/received_events",
+    "type": "User",
+    "site_admin": False
+  }
+]
+
+ write a program to display the below toutput
+
+
+LOGIN      :
+site admin :
+
+
+LOGIN      :
+site admin :
+
+
+
+
+for item in alist:
+    print("Login    :",item['login'])
+    print("Siteadmin:",item['site_admin'])
+    print("-------------")
+    
+
+
+###################################
+
+define a list below
+
+colors = [
+{
+"colors": "red",
+"values": "#f00"
+},
+{
+"colors": "green",
+"values": "#0f0"
+},
+{
+"colors": "blue",
+"values": "#00f"
+},
+{
+"colors": "cyan",
+"values": "#0ff"
+},
+{
+"colors": "magenta",
+"values": "#f0f"
+},
+{
+"colors": "yellow",
+"values": "#ff0"
+},
+{
+"colors": "black",
+"values": "#000"
+}
+]
+write a program to display all the colors and its values.
+
+red(#f00)
+green(#0f0)
+blue(#00f)
+cyan(#0ff)
+magenta(#f0f)
+yellow(#ff0)
+black(#000)
+
+
+
+
+for item in colors:
+    print(item['colors'] +  "("   +  item['values']  + ")")
+    
+    
+    
+for key,value in data.items():
+    if isinstance(value,str):
+        print(key,value)
+    elif isinstance(value,dict):
+        for skey,svalue in value.items():
+            finalkey = key + "." + skey
+            print(finalkey.ljust(20),":",svalue)
+        
+        
+
+
+#####################################################################
+
+write a program to capture any filename from the keyboard and display its filename and extension seperately
+
+Output:
+
+Enter any filename:  abc.py
+
+filename : abc
+extension: py
+
+
+filename = input("Enter any filename :")
+
+content = filename.split(".")
+
+print("Filename :",content[0])
+print("Extension:",content[1])
+
+
+#####################################################################
+
+
+define a dictionray as below
+
+{
+"id": "0001",
+"type": "donut",
+"name": "Cake",
+"image":
+{
+"url": "images/0001.jpg",
+"width": 200,
+"height": 200
+},
+"thumbnail":
+{
+"url": "images/thumbnails/0001.jpg",
+"width": 32,
+"height": 32
+}
+}
+
+write a program to display the below output:
+
+id           : 0001
+type         :donut
+name       : Cake
+image.width   : 200
+image.height : 200
+image.url      : images/0001.jpg
+thumbnail.width   : 32
+thumbnail.height : 32
+thumbnail.url      : images/0001.jpg
+
+
+
+for key,value in data.items():
+    if isinstance(value,str):
+        print(key,value)
+    elif isinstance(value,dict):
+        for skey,svalue in value.items():
+            finalkey = key + "." + skey
+            print(finalkey.ljust(20),":",svalue)
+        
+        
+        
+
+#############################################################
+
+
+
+define dictionary as below
+
+
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/2dIR9BTfr7QphpBuY3hPU-h5u-4\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IirngItQuVs"
+      }
+    }
+  ]
+}
+
+
+write a program to display all etag  information from the dictionary
+
+
+output:
+"\"m2yskBQFythfE4irbTIeOgYYfBU/PaiEDiVxOyCWelLPuuwa9LKz3Gk\
+"\"m2yskBQFythfE4irbTIeOgYYfBU/AWutzVOt_5p1iLVifyBdfoSTf9E\"
+..
+..
+#################################################
+
+define two lists
+alist = [10,20,30,40,50,10]
+blist = [40,50,60,70,80]
+
+display all the UNIQUE elements of both alist and blist  ( union )
+display all the COMMON elements of both alist and blist  
+
+
+######################################
+
+
+data = {"menu": {
+  "id": "file",
+  "value": "File",
+  "popup": {
+    "menuitem": [
+      {"value": "New", "onclick": "CreateNewDoc()"},
+      {"value": "Open", "onclick": "OpenDoc()"},
+      {"value": "Close", "onclick": "CloseDoc()"}
+    ]
+  }
+}}
+
+Output
+--------
+New
+Open
+Close
+
+#########################################
+
+write a progam to capture filename from the keyboard and display the type of the file
+if the filename is ending with .py  .... display "Its python file"
+if the filename is ending with .pl   .... display "Its perl file"
+If the filename is ending with .c  ....... display "Its C lang file"
+if the filename is ending with .json ...  display "Its json file"
+
+Enter any filename :  info.py
+Python file
+
+
+##################################
+
+
+write a program to validate the IP address
+
+ydict = {
+  "kind": "youtube#searchListResponse",
+  "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/PaiEDiVxOyCWelLPuuwa9LKz3Gk\"",
+  "nextPageToken": "CAUQAA",
+  "regionCode": "KE",
+  "pageInfo": {
+    "totalResults": 4249,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/QpOIr3QKlV5EUlzfFcVvDiJT0hw\"",
+      "id": {
+        "kind": "youtube#channel",
+        "channelId": "UCJowOS1R0FnhipXVqEnYU1A"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/AWutzVOt_5p1iLVifyBdfoSTf9E\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Eqa2nAAhHN0"
+Enter any IP address : 192.168.0.1
+Its valid IP
+Enter any IP address : 1001.1.2.3
+Invalid IP
+
+
+
+#########################################
+
+write a program to read employees.csv and display age and work-class columns data only
+
+
+
+#########################################
+
+write a program to read employees.csv and display all the distinct workclasses
+
+
+ State-gov
+ Private
+ Self-emp-not-inc
+ Federal-gov
+
+..
+..
+
+
+
+
+with open(r".\files\employees.csv","r") as fobj:
+    #converting file object to csv object
+    data = csv.reader(fobj)
+    # processing
+    for line in data:
+        workset.add(line[1])
+    
+    # display output
+    for element in workset:
+        print(element)
+
+
+
+
+# using dictionary
+workdict = dict()
+with open(r".\files\employees.csv","r") as fobj:
+    #converting file object to csv object
+    data = csv.reader(fobj)
+    # processing
+    for line in data:
+        workclass = line[1]
+        workdict[workclass] = 1  # { "private":1,"state-gov":1}
+        
+        {" State-gov":1," Self-emp-not-inc":1," Private":1,}
+    # displaying
+    for key in workdict:
+        print(key)
+
+
+#########################################
+
+write a program to read employees.csv and display the below output:
+
+Total male count :  4354
+Total female count : 33
+
+
+################################################################################################################################
+file read operations
+---------------------
+
+# reading the file line by line
+with open("clients.txt","r") as fobj:
+    for line in fobj:
+        print(line.strip())
+
+
+  
+# fobj.readlines()   ---> display all the lines in list
+with open("clients.txt","r") as fobj:
+    print(fobj.readlines())
+    
+    
+    
+# not suggested for readin large file
+# fobj.read()  -------> will return the string
+with open("clients.txt","r") as fobj:
+    print(fobj.read())
+    
+    
+    
+
+import csv
+with open("clients.txt","r") as fobj:
+    #converting file object to csv object
+    data = csv.reader(fobj)
+    for line in data:
+        print(line)  # each line will be automatically converted
+                     # to list
+
+    
+    
+    
+file write operations
+-----------------------
+
+# regular way or legacy way
+fobj = open("clients.txt","w")
+fobj.write("python\n")
+fobj.write("unix\n")
+fobj.write("java\n")
+fobj.writelines(["unix","java","oracle"])
+fobj.close()
+
+
+
+
+# numbers to the string
+fobj = open("numbers.txt","w")
+for val in range(1,100):
+    fobj.write(str(val)  + "\n")
+fobj.close()
+
+
+
+
+
+# regular way
+# context manager
+# If any line starts with keyword with .. we call it context manager
+# Advantage: file gets closed automatically
+with open("clients.txt","w") as fobj:
+    fobj.write("python\n")
+    fobj.write("unix\n")
+    fobj.write("java\n")
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################################################################################################################################
+
+create virtual environment
+--------------------------------
+conda create --name myenv1 python=3.11
+
+
+activating environment
+---------------------------
+conda activate myenv1
+
+deactivating
+------------------
+conda deactivate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
