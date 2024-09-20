@@ -162,6 +162,168 @@ How to display all the list of builtin(pre defined) functions and exceptions ?
 dir(__builtin__)
 
 
+file handling
+-------------------
+
+txt   - only text
+csv   - only text
+xlsx
+xls
+rtf   - only text
+pdf
+html
+dat   - only text
+doc/docx
+pptx/ppt
+jpeg
+mpeg
+png
+gif
+json   - only text
+xml    - only text
+tar
+zip
+rar
+tar.gz
+gz
+7z
+mp3
+mp4
+log   - only text
+conf   - only text
+.prop   - only text
+
+
+
+working with flat files( txt conf  log csv json  rtf ... )
+
+
+working with third party files ( pdf  xlsx pptx 7z  rar ... )
+- we need third party library
+
+- all the libraries are available in https://pypi.org/
+
+
+
+
+
+
+working with flat files( txt conf  log csv json  rtf ... )
+=========================================================
+
+
+read
+write
+append
+
+
+opening the file
+-------------------
+
+syntax:   object  = open(filename,mode)
+	
+closing the file
+-------------------
+object.close()
+
+
+
+read operation
+-----------------
+
+- reading the file line by line
+- fobj.readlines()
+- fobj.read()
+- using csv library for csv files, json library for json files
+- using pandas library
+
+functions | definition | subroutines
+------------------------------------
+
+
+void add(int a, int b)
+{
+     int c = a + b;
+     return c;
+}
+
+
+void main()
+{
+	int total = add(a,b);
+
+
+}
+
+
+different ways of passing arguments
+----------------------------------
+fixed arguments
+default arguments
+keyword arguments
+variable length arguments
+
+
+
+
+
+
+
+Every OS contains set of processes that keeps running.
+
+Every process contains system calls.
+
+
+lambda
+
+map with lambda function
+
+list comprehension
+
+
+
+
+
+
+
+
+
+
+
+exception handling
+----------------------
+
+there are 2 types of errors.
+
+syntax error
+semantic error or logical error or runtime error
+
+
+Handling errors that occurs during the runtime (execution time) is known as exception handling.
+
+
+try
+except
+else
+finally
+raise
+
+
+
+
+.py
+
+.ipynb ( interactive python notebook)
+
+.pyc ( compiled python file )
+
+
+.ipynb ( interactive python notebook)
+-----------------------------------------
+
+jupyter notebook ( comes along with anaconda )
+
+google colab
 
 
 
@@ -174,11 +336,155 @@ dir(__builtin__)
 
 
 
+step1:  login to your database
+
+step2: display all the databases
+------------------------------
+show databases;
+
+step3: create your database
+----------------------------
+create database userdatabase;
+
+step4: access your database
+----------------------------
+use userdatabase;
+
+step5: create table
+------
+create table users ( gender varchar(10) , occupation varchar(100) );
+
+step6: insert few records
+-------
+insert into users values('M','Engineer');
+insert into users values('F','scientist');
+
+step7: display all the records
+-------------------------------
+select * from users ;
+
+
+
+database   - library
+-----------------------
+mysql        pymysql
+Oracle       cx_Oracle
+MongoDB      pymongo
+SQLite       sqlite3
+SQLserver    pymssql
+IBM DB2      db2
+
+cloud
+------
+AWS         boto3
+Azure       azure
+
+
+
+
+step1:
+--------
+connect to db
+
+step2:
+------
+define query
+
+step3:
+--------
+execute query
+
+step4:
+--------
+close the connection
 
 
 
 
 
+
+
+
+
+write a program to read u.user file and
+ insert all the records to the database
+
+
+
+working with database
+----------------------
+
+- using core python
+- using pandas
+
+
+df = pd.read_csv()  ---> for the file
+
+query = "select * from users"
+df = pd.read_sql(query,connectionstring)
+
+
+
+
+write a program to display all the records from the database 
+using pandas.
+
+
+
+
+there are 2 ways of programming
+-------------------------------
+
+- procedural programming ( top- down approach   Eg: C )
+
+- object oriented programming ( Java dot.net )
+
+global concepts for all Object oriented languages
+-----------------------------------------------
+class
+object
+data hiding
+encapsulation
+polymorphism
+ - function overloading
+ - operator overloading
+
+inheritance
+
+
+
+
+
+
+
+class
+-----
+class is like the blueprint of the house.
+Every class contains data members and member functions.
+
+
+object
+-------
+object is the instance of the class.
+
+self
+----
+self is the instance of the object
+
+
+constructor
+--------------
+constructor in python is a special method which is invoked automatically
+when object is created.
+
+Advantage: constructor is invoked automatically without calling.
+
+
+
+############################
+
+
+write a program to read u.user and display all the records line by line using object oriented
 
 
 
